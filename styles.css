@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box; /* Учитываем padding и border в размерах элемента */
+  margin: 0;
+  padding: 0;
+  font-family: "RobotoMono-Thin";
+  
+}
+
+@font-face {
+  font-family: "RobotoMono-Thin";
+  src: url("fonts/RobotoMono-Thin.ttf");
+}
+
+body {
+  background-image: url("campfire.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px);
+}
+
+.container {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.calculation-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.calculation-section {
+  background: rgb(51, 48, 48, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  max-width: 380px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #000000;
+  font-weight: 1000;
+}
+
+.input-field::placeholder {
+  color: #6c757d; /* Тусклый цвет для placeholder */
+  font-weight: 400;
+}
+
+.output {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.output span {
+  color: #007bff; /* Приятный синий цвет */
+  font-weight: bold;
+}
+
+.copy-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.copy-btn:hover {
+  background: #218838;
+}
+
+.add-section-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.add-section-btn:hover {
+  background: #0056b3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
