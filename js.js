@@ -1,11 +1,12 @@
 let sectionCount = 0;
-
+document.getElementById('calculationContainer').style.display = 'none';
 function createSection() {
     if (sectionCount >= 6) return;
     sectionCount++;
 
     const section = document.createElement('div');
     section.className = 'calculation-section';
+    section.style.opacity = '0';
     section.innerHTML = `
         <div class="input-group">
             <label>Введите диаметр трубы:</label>
@@ -18,14 +19,21 @@ function createSection() {
         </div>
     `;
     document.getElementById('calculationContainer').appendChild(section);
+    
+    setTimeout(() => {
+        section.style.opacity = '1';
+        section.style.transition = 'opacity 0.5s ease';
+    }, 100);
+    
 
     updateAddButtonPosition();
 }
-
 function addSection() {
-    createSection();
+const container = document.getElementById('calculationContainer');
+container.style.display = 'grid'; {
 }
-
+createSection();
+}
 function calculateArea(input) {
     const section = input.closest('.calculation-section');
     const diameter = parseFloat(section.querySelector('.diameter').value);
@@ -99,7 +107,4 @@ function updateAddButtonPosition() {
     container.appendChild(addBtn);
 }
 
-// Создаём 2 стартовые строки (3 колонки по 2 ячейки = 6 максимум)
-createSection();
-createSection();
-createSection();
+
