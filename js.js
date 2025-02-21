@@ -72,11 +72,12 @@ function copyResult(button) {
   const diameter = section.querySelector('.diameter').value;
   const area = section.querySelector('.area').textContent;
   const volume = section.querySelector('.volume').textContent;
+  const length = section.querySelector('.length').value;
 
   if (diameter) {
       const result = 
           `Площадь сечения трубы диаметром ⌀${diameter} мм равна: ${area} м²\n` +
-          `Объём трубы диаметром ⌀${diameter} мм равен: ${volume} м³`;
+          `Объём трубы диаметром ⌀${diameter} мм и длиной ${length} м равен: ${volume} м³`;
 
       navigator.clipboard.writeText(result)
           .then(() => {
